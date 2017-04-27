@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic'>
+    <link rel="stylesheet" type="text/css" href="@Url.Action("~/Content/Template/")css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="@Url.Action("~/Content/Template/")css/ekko-lightbox.min.css">
+    <!--    <link rel="stylesheet" type="text/css" href="css/ekko-lightbox-dark.css"> -->
+    <link rel="stylesheet" type="text/css" href="@Url.Action("~/Content/Template/")font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Action("~/Content/Template/")css/style.css">
+
+
+</head>
+<body>
+
+    <nav class="navbar-header, navbar-left">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="/Content/template/images/Logo.PNG">
+            </a>
+        </div>
+        
+    </nav>
+
+    <nav class="navbar navbar-light">
+        <ul class="nav navbar-nav single-page-nav">
+            <li class="nav-item">
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Destinations", "Destinations", "Destination")
+            </li>
+            <li class="nav-item">
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Register", "Register", "Account")
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Log In", "Login", "Account")
+            </li>
+
+        </ul>
+    </nav>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="sigma-hr">
+        </div>
+    </div>
+    <section id="home">
+
+        <div class="container-fluid">
+        </div>
+    </section>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+
+</html>
+<footer>
+    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+</footer>
